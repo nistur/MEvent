@@ -9,7 +9,7 @@ MResource* getter()
     return MGameEventImpl::getInstance();
 }
 
-void StartPlugin(void)
+void MPluginStart(MEvent)
 {
     MResource::registerFactory("MGameEvent", getter);
 
@@ -19,7 +19,7 @@ void StartPlugin(void)
     engine->setGame(s_gameEventInstance);
 }
 
-void EndPlugin(void)
+void MPluginEnd(MEvent)
 {
     MEngine* engine = MEngine::getInstance();
     engine->setGame(s_prevGame);
