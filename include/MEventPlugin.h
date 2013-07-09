@@ -33,8 +33,8 @@ EndPlugin()
 extern "C"
 {
 
-EXPORT void MPluginStart(MSaveFile);
-EXPORT void MPluginEnd  (MSaveFile);
+EXPORT void MPluginStart(MEvent);
+EXPORT void MPluginEnd  (MEvent);
 
 }
 #endif/*__MEVENT_PLUGIN_H__*/
